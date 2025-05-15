@@ -21,7 +21,7 @@ This repo contains hands-on learning resources, project examples, and notes as I
 
 ## 🧠 Goals
 
-My lord's goal with this repository is to:
+My goal with this repository is to:
 
 - Practice building secure and scalable APIs
 - Understand backend design patterns and best practices
