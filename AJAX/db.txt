@@ -1,0 +1,4 @@
+Hello user..
+I'm DB.
+I was created because you don't have any server now
+Thank you!

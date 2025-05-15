@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Synchronous and Asynchronous</title>
+</head>
+<body>
+  <h1>Synchronous and Asynchronous Example</h1>
+</body>
+  <script>
+    // synchronous example
+      console.log("Start");
+      console.log("Middle");
+      console.log("End");
+  //  Everything runs line by line in the order written.
+
+    // Asynchronous example
+    console.log("Start");
+    //Set a timer
+    setTimeout(() => {
+      console.log("Middle");
+    }, 2000);
+    console.log("End");
+    //  JavaScript waits for each task to finish before moving to the next one.
+
+  </script>
+</html>
+
+
+

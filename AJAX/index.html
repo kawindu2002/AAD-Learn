@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+  <h1>AJAX Example</h1>
+  <button id="ajax-btn">Send an Ajax Request</button>
+<!--  <h4 id="text-id"></h4>-->
+  <table>
+      <thead>
+          <tr>
+<!--              <th scope="col">FirstName</th>-->
+<!--              <th scope="col">LastName</th>-->
+<!--              <th scope="col">Address</th>-->
+<!--              <th scope="col">Contact</th>-->
+
+              <th scope="col">PostId</th>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Body</th>
+
+          </tr>
+      </thead>
+      <tbody id="table-body">
+      </tbody>
+  </table>
+
+  <script src="lib/jquery-3.7.1.min.js"></script>
+
+    <script>
+        // const $btn = $('#ajax-btn');
+
+        // $btn.click(function () {
+        //     console.log("Request Started!");
+        //
+        //     let http =  new XMLHttpRequest();
+        //     console.log(http.readyState,"After the object created");
+        //
+        //     http.open("GET", "https://www.daraz.lk",true);
+        //     console.log(http.readyState,"After the object opened");
+        //
+        //     http.send();
+        //     console.log(http.readyState,"After the send method invoked");
+        //
+        //     http.onreadystatechange = function () {
+        //         console.log(http.readyState,"Inside on ready state change event");
+        //     }
+        //
+        //     console.log("Request finished!");
+        // });
+
+        //======================================================================================================================
+
+        // $btn.click(function () {
+        //     var http = new XMLHttpRequest();
+        //
+        //     http.open("GET", "db.txt");
+        //     http.send();
+        //
+        //     http.onreadystatechange = function () {
+        //         // Always check and verify with number codes
+        //         if (http.readyState === 4 && http.status === 200) {
+        //             $('#text-id').text(http.responseText);
+        //         }else if (http.readyState === 4 && http.status === 404) {
+        //             alert('Page not found');
+        //         }
+        //     }
+        // });
+
+        // Me widiht hmwelem code use krn ek krdarai.. Ekt iQuery wl ajax() use krnw.
+
+        // $('#ajax-btn').click(function () {
+        //     $.ajax({
+        //         url: 'db.txt',
+        //         method: 'GET',
+        //         success: function (response) {
+        //             $('#text-id').text(response);
+        //         },
+        //         error: function (error) {
+        //             console.log(error);
+        //         }
+        //     })
+        // });
+
+        //======================================================================================================================
+
+        // $('#ajax-btn').click(function () {
+        //     $.ajax({
+        //         url: 'database.json',
+        //         method: 'GET',
+        //         success: function (response) {
+        //             console.log("First Name : "+response.firstname);
+        //             console.log("Last Name : "+response.lastname);
+        //             console.log("Address : "+response.address);
+        //             console.log("Contact : "+response.contact);
+        //
+        //             // $('#text-id').text("First Name : "+response.firstname);
+        //         },
+        //         error: function (error) {
+        //             console.log(error);
+        //         }
+        //     })
+        // });
+
+        //======================================================================================================================
+
+        // $('#ajax-btn').click(function () {
+        //     console.log("Start");
+        //
+        //     $('#table-body').empty();
+        //     $.ajax({
+        //         url: 'database.json',
+        //         // This use to control synchronization
+        //         async: false,
+        //         method: 'GET',
+        //         success: function (response) {
+        //             response.forEach(person => {
+        //                 const row = `
+        //                                 <tr>
+        //                                     <td>${person.firstname}</td>
+        //                                     <td>${person.lastname}</td>
+        //                                     <td>${person.address}</td>
+        //                                     <td>${person.contact}</td>
+        //                                 </tr>
+        //                 `;
+        //
+        //                 $('#table-body').append(row);
+        //             });
+        //             console.log("Completed");
+        //
+        //         },
+        //         error: function (error) {
+        //             console.log(error);
+        //         }
+        //     })
+        //     console.log("End");
+
+        // });
+        //
+
+
+
+        //======================================================================================================================
+
+        $('#ajax-btn').click(function () {
+            console.log("Start");
+
+            $('#table-body').empty();
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/comments',
+                // This use to control synchronization
+                async: false,
+                method: 'GET',
+                success: function (response) {
+                    response.forEach(comment => {
+                        const row = `
+                                        <tr>
+                                            <td>${comment.postId}</td>
+                                            <td>${comment.id}</td>
+                                            <td>${comment.name}</td>
+                                            <td>${comment.email}</td>
+                                            <td>${comment.body}</td>
+                                        </tr>
+                        `;
+
+                        $('#table-body').append(row);
+                    });
+                    console.log("Completed");
+
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            })
+            console.log("End");
+
+        });
+
+
+    </script>
+</body>
+</html>
+
