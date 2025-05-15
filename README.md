@@ -20,9 +20,6 @@ This repo contains hands-on learning resources, project examples, and notes as I
 
 ---
 
-
----
-
 ## 🧠 Goals
 
 My lord's goal with this repository is to:
