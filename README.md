@@ -56,10 +56,6 @@ My lord's goal with this repository is to:
 
 - This is a personal learning journey, but if you want to suggest improvements or fixes, feel free to open a pull request or issue.
 
-## 📜 License
-
-- This project is open source and available under the MIT License.
-
 
 ## 🌟 Star if You Like It
 
