@@ -7,8 +7,8 @@ Welcome to **AAD-Learn** – a personal learning repository focused on mastering
 
 This repo contains hands-on learning resources, project examples, and notes as I explore:
 
-- 🔹 Spring Boot Rest APIs  
-- 🔹 Authentication with JWT  
+- Spring Boot Rest APIs  
+- Authentication with JWT  
 - 🔹 Spring Security  
 - 🔹 Role-Based Access Control  
 - 🔹 API Documentation
