@@ -9,8 +9,8 @@ This repo contains hands-on learning resources, project examples, and notes as I
 
 - Spring Boot Rest APIs  
 - Authentication with JWT  
-- 🔹 Spring Security  
-- 🔹 Role-Based Access Control  
+-  Spring Security  
+-  Role-Based Access Control  
 - 🔹 API Documentation
 - 🔹 Exception Handling  
 - 🔹 DTOs & Model Mapping  
